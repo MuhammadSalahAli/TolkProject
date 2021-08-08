@@ -58,7 +58,7 @@
     color: var(--compose-link-color)
 }
 
-.modal-body .nav li+li {
+.modal-body .nav li + li {
     margin-left: 6px
 }
 
@@ -163,7 +163,7 @@
     background: var(--compose-scrollbar-thumb-color)
 }
 
-.modal-body .users>li {
+.modal-body .users > li {
     display: flex;
     align-items: center;
     padding: 25px 0;
@@ -176,13 +176,13 @@
     margin-right: 15px
 }
 
-.users>li img {
+.users > li img {
     width: 42px;
     height: 42px;
     border-radius: 100%
 }
 
-.users>li .content {
+.users > li .content {
     flex-basis: 100%
 }
 
@@ -209,7 +209,7 @@
     background: var(--compose-scrollbar-thumb-color)
 }
 
-#create .modal-body .contacts>a {
+#create .modal-body .contacts > a {
     display: flex;
     align-items: center;
     padding: 25px 10px;
@@ -218,7 +218,7 @@
     border: none
 }
 
-#create .modal-body .contacts>a:hover {
+#create .modal-body .contacts > a:hover {
     background: var(--compose-contacts-hover-background-color)
 }
 
@@ -254,13 +254,13 @@
     border: none
 }
 
-.contacts>a img {
+.contacts > a img {
     width: 42px;
     height: 42px;
     border-radius: 100%
 }
 
-.custom-control-input:checked~.custom-control-label::before {
+.custom-control-input:checked ~ .custom-control-label::before {
     color: #fff;
     border-color: var(--compose-tab-background-color);
     background-color: var(--compose-tab-background-color)
@@ -298,7 +298,7 @@
 
 #create .btn-primary:not(:disabled):not(.disabled).active,
 .btn-primary:not(:disabled):not(.disabled):active,
-.show>.btn-primary.dropdown-toggle {
+.show > .btn-primary.dropdown-toggle {
     color: #fff;
     background-color: var(--compose-submit-button-color);
     border-color: var(--compose-submit-button-color)
@@ -315,25 +315,25 @@
     border: none
 }
 
-.modal+.modal {
+.modal + .modal {
     background: var(--auth-modal-background-color);
     overflow-y: auto;
     padding-top: 50px
 }
 
-.modal+.modal::-webkit-scrollbar {
+.modal + .modal::-webkit-scrollbar {
     width: 0 !important
 }
 
-.modal+.modal {
+.modal + .modal {
     overflow: -moz-scrollbars-none
 }
 
-.modal+.modal {
+.modal + .modal {
     -ms-overflow-style: none
 }
 
-#create.active{
+#create.active {
     background: rgba(0, 0, 0, 0.50);
 }
 
@@ -342,59 +342,75 @@
     opacity: 1
 }
 
-.modal+.modal .modal-content {
+.modal + .modal .modal-content {
     background: var(--auth-background-color);
     box-shadow: var(--auth-box-shadow)
 }
 
-.modal+.modal .modal-header h4 {
+#Login .modal-header {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0;
+}
+
+#Login .guest-login {
+    background: var(--purple);
+    border: none;
+    color: var(--white);
+    margin-bottom: 0;
+}
+#Login .modal-header h4 {
+    margin-bottom: 25px;
+}
+
+.modal + .modal .modal-header h4 {
     color: var(--auth-header-font-color);
     width: 100%;
     text-align: center
 }
 
-.modal+.modal .modal-header h4 i:before {
+.modal + .modal .modal-header h4 i:before {
     margin: 0;
     font-size: 60px;
     color: var(--auth-input-font-color)
 }
 
-.modal+.modal .modal-body label {
+.modal + .modal .modal-body label {
     color: var(--auth-input-font-color)
 }
 
-.modal+.modal .modal-body .form-control {
+.modal + .modal .modal-body .form-control {
     background: var(--auth-input-background-color);
     border: 1px solid var(--auth-input-font-color)
 }
 
-.modal+.modal .modal-body .form-control:focus {
+.modal + .modal .modal-body .form-control:focus {
     border: 1px solid var(--auth-input-active-border-color)
 }
 
-.modal+.modal .modal-body,
-.modal+.modal .modal-footer,
-.modal+.modal .modal-header {
+.modal + .modal .modal-body,
+.modal + .modal .modal-footer,
+.modal + .modal .modal-header {
     background: var(--auth-background-color)
 }
 
-.modal+.modal .modal-footer {
+.modal + .modal .modal-footer {
     flex-direction: column
 }
 
-.modal+.modal .modal-footer .switch-form {
+.modal + .modal .modal-footer .switch-form {
     margin-top: 30px
 }
 
-.modal+.modal .modal-footer .switch-form small {
+.modal + .modal .modal-footer .switch-form small {
     color: var(--auth-input-font-color)
 }
 
-.modal+.modal .modal-footer .switch-form small a {
+.modal + .modal .modal-footer .switch-form small a {
     color: var(--auth-switch-modal-font-color)
 }
 
-.modal+.modal .modal-footer button {
+.modal + .modal .modal-footer button {
     background: var(--auth-submit-button-color);
     border: 1px solid var(--auth-submit-button-border-color);
     color: var(--auth-submit-font-color);
@@ -404,19 +420,19 @@
     box-shadow: none
 }
 
-.modal+.modal .modal-footer button:hover {
+.modal + .modal .modal-footer button:hover {
     background: var(--auth-active-submit-button-color);
     color: var(--auth-active-submit-button-font-color);
     border: 1px solid var(--auth-active-submit-button-border-color)
 }
 
-.modal+.modal .modal-footer button:focus {
+.modal + .modal .modal-footer button:focus {
     background: 0 0;
     border: 1px solid var(--auth-active-submit-button-border-color);
     box-shadow: none
 }
 
-.modal+.modal .modal-footer button:active {
+.modal + .modal .modal-footer button:active {
     outline: 0;
     border: 1px solid var(--auth-active-submit-button-color);
     color: var(--auth-active-submit-button-font-color);
@@ -424,7 +440,7 @@
     box-shadow: none
 }
 
-.modal+.modal .modal-footer button:active:focus {
+.modal + .modal .modal-footer button:active:focus {
     outline: 0;
     border: 1px solid var(--compose-active-submit-button-border-color-2);
     color: var(--auth-active-submit-button-font-color);
@@ -470,12 +486,12 @@ form .form-group.error label {
     color: var(--info)
 }
 
-@media (max-width:991px) {
-    .modal+.modal {
+@media (max-width: 991px) {
+    .modal + .modal {
         background-color: var(--auth-mobile-modal-background-color)
     }
 
-    .modal+.modal .modal-content {
+    .modal + .modal .modal-content {
         box-shadow: none
     }
 }
